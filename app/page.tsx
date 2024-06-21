@@ -136,8 +136,8 @@ export default function Home() {
               required
               type="search"
               size="lg"
-              placeholder="Suche nach einer Serie..."
-              aria-label="Suche nach einer Serie"
+              placeholder="Suchbegriff..."
+              aria-label="Suchbegriff eingeben"
               aria-describedby="submit-button"
               value={query}
               onChange={(event) => setQuery(event.target.value)}
