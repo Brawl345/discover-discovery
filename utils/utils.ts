@@ -9,3 +9,17 @@ export const getImageUrl = (item: Item) => {
 
   return media?.media.url;
 };
+
+export const isBlank = (str: string | null | undefined) => {
+  if (str === null || str === undefined) {
+    return true;
+  }
+  return str.trim().length === 0;
+};
+
+export const strOr = (str: string | null | undefined, fallback: string) => {
+  if (isBlank(str)) {
+    return fallback;
+  }
+  return str;
+};

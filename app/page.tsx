@@ -15,7 +15,7 @@ import {
   Spinner,
 } from 'react-bootstrap';
 import { allRealms, Data, getRealmName, Item, Realm } from '@/utils/types';
-import { getImageUrl } from '@/utils/utils';
+import { getImageUrl, strOr } from '@/utils/utils';
 
 const fuse = new Fuse([], {
   keys: ['metaTitle'],
@@ -171,7 +171,7 @@ export default function Home() {
               <div className="img-overlay">
                 <div className="overlay-text">
                   <p>{result.item.title}</p>
-                  <p>ID: {result.item.attributes.showId}</p>
+                  <p>ID: {strOr(result.item.attributes.showId, '???')}</p>
                 </div>
               </div>
             </div>
